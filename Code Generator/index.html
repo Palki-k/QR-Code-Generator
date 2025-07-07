@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>QR Code Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="https://unpkg.com/read-excel-file@4.x/bundle/read-excel-file.min.js"></script>
+
+</head>
+<body>
+ 
+    <div class="box">
+        <div class="qr-header">
+            <h1>Generate QR Code</h1>
+
+            <div>
+            <label for="sizes">Select Sizes:</label>
+            <select id="sizes">
+                <option value="100">100x100</option>
+                <option value="200">200x200</option>
+                <option value="300">300x300</option>
+                
+            </select>
+            </div>
+        </div>
+        <div class="qr-body"></div>
+        <div class="qr-footer">
+            <a href="" id="generateBtn">Generate</a>
+            <a href="" id="downloadBtn">Download Zip</a>
+        </div>
+        <div class="container">
+        <input type="file" id="file" accept=".xlsx, .xls" required>
+        <table class="table" id="table"></table>
+        
+     </div>
+    </div>
+    <script src="main.js"></script>
+    
+        
+    </script>
+</body>
+</html>
